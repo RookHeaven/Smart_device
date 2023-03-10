@@ -1,0 +1,115 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 13;
+  width: 100%;
+  background: $black-to-bottom;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    min-height: 120px;
+    padding: 30px 62px 35px 18px;
+
+    @include vp-1023 {
+      min-height: 100px;
+      padding: 20px 70px 25px 50px;
+    }
+
+    @include vp-767 {
+      min-height: 70px;
+      padding: 10px 35px 20px 26px;
+    }
+  }
+
+  &__logo {
+    cursor: default;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 36px;
+    margin-bottom: 5px;
+
+    @include vp-1023 {
+      gap: 19px;
+      margin-bottom: 15px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 5px;
+    }
+
+
+    a {
+      display: flex;
+      align-items: center;
+      min-width: 215px;
+      color: $color-alice-blue;
+      line-height: 18px;
+
+      @include hover-focus {
+        color: $color-deep-sky-blue;
+      }
+
+      @include active {
+        color: $color-deep-sky-blue;
+        opacity: 0.8;
+      }
+
+      @include vp-1023 {
+        min-width: auto;
+        padding: 10px;
+      }
+    }
+
+    svg {
+      color: $color-deep-sky-blue;
+
+      @include vp-1023 {
+        @include hover-focus {
+          color: $color-default-white;
+        }
+      }
+    }
+
+    span {
+      margin-left: 15px;
+
+      @include vp-1023 {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    min-width: 160px;
+    max-height: 40px;
+    border: 1px solid $color-alice-blue;
+    font-family: $roboto-condensed-bold;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    padding-left: 17px;
+
+    @include hover-focus {
+      border: transparent;
+      background-color: $color-deep-sky-blue;
+    }
+
+    @include active {
+      border: transparent;
+      background-color: $color-deep-sky-blue;
+      opacity: 0.8;
+    }
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+}

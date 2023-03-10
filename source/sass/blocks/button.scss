@@ -1,0 +1,19 @@
+.button {
+  display: inline-flex;
+  padding: 15px 25px;
+  color: $color-alice-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: $color-transparent;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  &:disabled,
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
