@@ -622,7 +622,7 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -642,6 +642,33 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+}
+
+.button--promo {
+  font-family: "RobotoCondensed-Bold", "Arial Black", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  border: 1px solid transparent;
+  background-color: #00b2ff;
+  min-width: 410px;
+  height: 55px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.button--promo.focus-visible:focus {
+  border-color: #f2f5f6;
+  background-color: #041827;
+}
+
+.button--promo:active:not(.focus-visible) {
+  border-color: #f2f5f6;
+  background-color: #041827;
+  opacity: 0.8;
+}
+
+.button--promo span:last-of-type {
+  display: none;
 }
 
 .button:disabled,
@@ -1297,7 +1324,6 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 1240px;
   min-height: 120px;
   padding: 30px 62px 35px 18px;
 }
@@ -1335,7 +1361,7 @@ button,
   color: #00b2ff;
 }
 
-.header__contacts a.focus-visible:active {
+.header__contacts a:active:not(.focus-visible) {
   color: #00b2ff;
   opacity: 0.8;
 }
@@ -1350,7 +1376,7 @@ button,
 
 .header__button {
   min-width: 160px;
-  max-height: 40px;
+  height: 40px;
   border: 1px solid #f2f5f6;
   font-family: "RobotoCondensed-Bold", "Arial Black", sans-serif;
   font-size: 14px;
@@ -1365,10 +1391,55 @@ button,
   background-color: #00b2ff;
 }
 
-.header__button.focus-visible:active {
+.header__button:active:not(.focus-visible) {
   border: transparent;
   background-color: #00b2ff;
   opacity: 0.8;
+}
+
+.promo {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/promo/promo_background_desktop.jpg");
+  background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_desktop.jpg");
+  background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_desktop.jpg");
+  background-size: cover;
+  background-color: #041827;
+  background-position: bottom;
+  margin-top: -120px;
+  padding-top: 120px;
+  min-height: 880px;
+}
+
+.promo__wrapper {
+  padding: 184px 50px 190px 143px;
+}
+
+.promo__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.promo__info h1 {
+  font-family: "RobotoCondensed-Bold", "Arial Black", sans-serif;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  color: #f2f5f6;
+  text-transform: uppercase;
+  margin: 0 0 32px 0;
+}
+
+.promo__info p {
+  font-family: "PTMono-Regular", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 34px;
+  color: #f2f5f6;
+  margin: 0 0 46px 0;
+  max-width: 680px;
 }
 
 /* @mixin hover-focus {
@@ -1417,6 +1488,14 @@ button,
     padding: 0 24px;
   }
 
+  .button--promo {
+    margin-left: 46px;
+  }
+
+  .header {
+    display: block;
+  }
+
   .header__wrapper {
     min-height: 100px;
     padding: 20px 70px 25px 50px;
@@ -1443,6 +1522,29 @@ button,
   .header__button {
     display: none;
   }
+
+  .promo {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/promo/promo_background_tablet.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_tablet.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_tablet.jpg");
+    margin-top: -100px;
+    padding-top: 100px;
+    min-height: 640px;
+  }
+
+  .promo__wrapper {
+    padding: 79px 50px 193px;
+  }
+
+  .promo__info h1 {
+    font-size: 64px;
+    line-height: 75px;
+    margin: 0 0 2px 0;
+  }
+
+  .promo__info p {
+    margin: 0 0 56px 0;
+  }
 }
 
 @media (max-width: 1023px) and (hover: hover) {
@@ -1451,9 +1553,40 @@ button,
   }
 }
 
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .promo {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/promo/promo_background_tablet@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_tablet@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_tablet@2x.jpg");
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 0 16px;
+  }
+
+  .button--promo {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0 0 2px 0;
+    height: 40px;
+    min-width: 270px;
+    padding: 10px 30px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .button--promo span:first-of-type {
+    display: none;
+  }
+
+  .button--promo span:last-of-type {
+    display: block;
   }
 
   .modal__wrapper {
@@ -1474,8 +1607,37 @@ button,
     padding: 10px 35px 20px 26px;
   }
 
+  .header__logo {
+    margin-top: 5px;
+  }
+
   .header__contacts {
-    margin-bottom: 5px;
+    margin: 0;
+  }
+
+  .promo {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/promo/promo_background_mobile.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_mobile.jpg");
+    margin-top: -70px;
+    padding-top: 70px;
+    min-height: 560px;
+  }
+
+  .promo__wrapper {
+    padding: 80px 24px 189px;
+  }
+
+  .promo__info h1 {
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0 0 8px 0;
+  }
+
+  .promo__info p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 43px 0;
   }
 }
 
@@ -1542,7 +1704,20 @@ button,
   }
 }
 
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .promo {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/promo/promo_background_mobile@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_mobile@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_mobile@2x.jpg");
+  }
+}
+
 @media (hover: hover) {
+  .button--promo:hover:not(.focus-visible) {
+    border-color: #f2f5f6;
+    background-color: #041827;
+  }
+
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -1558,5 +1733,13 @@ button,
   .header__button:hover:not(.focus-visible) {
     border: transparent;
     background-color: #00b2ff;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .promo {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/promo/promo_background_desktop@2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_desktop@2x.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71%, rgba(25, 32, 36, 0) 100%), url("../img/promo/promo_background_desktop@2x.jpg");
   }
 }

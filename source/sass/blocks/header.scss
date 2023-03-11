@@ -5,11 +5,14 @@
   width: 100%;
   background: $black-to-bottom;
 
+      @include vp-1023 {
+        display: block;
+    }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1240px;
     min-height: 120px;
     padding: 30px 62px 35px 18px;
 
@@ -26,6 +29,10 @@
 
   &__logo {
     cursor: default;
+
+    @include vp-767 {
+      margin-top: 5px;
+    }
   }
 
   &__contacts {
@@ -41,7 +48,7 @@
     }
 
     @include vp-767 {
-      margin-bottom: 5px;
+      margin: 0;
     }
 
 
@@ -88,7 +95,7 @@
 
   &__button {
     min-width: 160px;
-    max-height: 40px;
+    height: 40px;
     border: 1px solid $color-alice-blue;
     font-family: $roboto-condensed-bold;
     font-size: 14px;
