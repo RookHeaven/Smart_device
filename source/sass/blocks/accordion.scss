@@ -1,0 +1,76 @@
+.accordion {
+  margin: 0 auto 50px auto;
+
+  & & {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__element:last-child {
+    margin-bottom: 0;
+  }
+
+  &__element {
+    @include vp-767 {
+      position: relative;
+      border-bottom: 1px solid $color-alice-blue-70;
+      padding: 22px 25px 5px;
+    }
+  }
+
+  &__element.is-active &__button {
+    &::after {
+      content: none;
+    }
+  }
+
+  &__button {
+    display: none;
+    padding: 0;
+
+    @include vp-767 {
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 1px;
+        top: 27px;
+        right: 26px;
+        background-color: $color-alice-blue-100;
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 10px;
+  }
+
+  &__header {
+    display: contents;
+
+    @include vp-767 {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      @include vp-767 {
+        margin: 0;
+      }
+    }
+  }
+}
