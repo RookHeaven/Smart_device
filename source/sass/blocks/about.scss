@@ -1,0 +1,120 @@
+.about {
+  background-color: $color-alice-blue-100;
+
+  &__wrapper {
+    display: grid;
+    grid-template-areas:
+        "img text"
+        "img btn";
+    grid-column-gap: 100px;
+    padding: 0 0 100px 17px;
+
+    @include vp-1023 {
+      grid-column-gap: 29px;
+      padding: 0 50px 80px 46px;
+    }
+
+    @include vp-767 {
+      display: block;
+      padding: 0 25px 80px;
+    }
+  }
+
+  &__picture {
+    grid-area: img;
+
+    @include vp-1023 {
+      margin-top: 4px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__inner {
+    grid-area: text;
+    max-width: 970px;
+    height: 234px;
+    overflow: hidden;
+
+
+    @include vp-1023 {
+      height: 339px;
+    }
+
+    @include vp-767 {
+      height: 255px;
+    }
+
+    h2 {
+      font-family: $roboto-condensed-regular;
+      font-size: 36px;
+      line-height: 51px;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 12px;
+
+      @include vp-1023 {
+        margin-bottom: 11px;
+      }
+
+      @include vp-767 {
+        font-size: 28px;
+        line-height: 39px;
+      }
+    }
+
+    p {
+      line-height: 22px;
+      margin: 0 0 20px;
+
+      @include vp-1023 {
+        margin: 0 0 18px;
+      }
+
+      @include vp-767 {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+
+    &.is-shown {
+      height: auto;
+      overflow: initial;
+    }
+  }
+
+  &__button {
+    font-family: $roboto-condensed-bold;
+    font-size: 14px;
+    line-height: 16px;
+    border: 1px solid $color-deep-sky-blue;
+    background-color: transparent;
+    color: $color-deep-sky-blue;
+    width: 180px;
+    height: 45px;
+    grid-area: btn;
+    padding: 14px 13px 8px 12px;
+    align-items: center;
+    justify-content: center;
+
+    @include hover-focus {
+      background-color: $color-deep-sky-blue;
+      color: $color-alice-blue;
+    }
+
+    @include active {
+      background-color: $color-deep-sky-blue;
+      color: $color-alice-blue;
+      opacity: 0.8;
+    }
+
+    @include vp-767 {
+      width: 160px;
+      height: 35px;
+      margin-top: 15px;
+      padding: 8px 15px 12px;
+    }
+  }
+}
