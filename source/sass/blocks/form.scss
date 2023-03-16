@@ -1,0 +1,163 @@
+.form {
+  color: $color-default-white;
+
+  h2 {
+    font-family: $roboto-condensed-regular;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    margin-top: 0;
+    margin-bottom: 11px;
+
+    @include vp-1023 {
+      margin-bottom: 6px;
+    }
+
+    @include vp-767 {
+      font-size: 30px;
+      line-height: 42px;
+    }
+  }
+
+  p {
+    line-height: 22px;
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    @include vp-1023 {
+      margin-bottom: 25px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+      flex-basis: 100%;
+      margin-bottom: 34px;
+    }
+
+    &:last-child {
+      flex-basis: 50%;
+      font-size: 14px;
+      line-height: 16px;
+      opacity: 0.8;
+      margin: 0;
+
+      @include vp-767 {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    input {
+      height: 50px;
+      padding: 15px;
+      width: 48%;
+      margin-bottom: 20px;
+      background-color: $color-black-pearl-15;
+      border: 0;
+      border-radius: 3px;
+
+      @include vp-767 {
+        width: 100%;
+      }
+
+
+      &::placeholder {
+        color: $color-default-white;
+        line-height: 22px;
+      }
+    }
+
+    input[type=checkbox] + label {
+      position: relative;
+      display: flex;
+      margin-top: 15px;
+      padding-left: 53px;
+      cursor: pointer;
+
+      @include vp-1023 {
+        margin-top: 10px;
+        padding-left: 40px;
+      }
+
+      @include vp-767 {
+        margin-top: 23px;
+        padding-left: 31px;
+      }
+
+      &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 7px;
+        left: 28px;
+        border: 1px solid $color-default-white;
+        border-radius: 2px;
+
+        @include vp-1023 {
+          left: 15px;
+        }
+
+        @include vp-767 {
+          top: 8px;
+          left: 5px;
+        }
+      }
+    }
+
+    input[type="checkbox"]:checked + label {
+      &::after {
+        content: "";
+        width: 7px;
+        height: 4px;
+        position: absolute;
+        left: 31px;
+        top: 11px;
+        border-left: 1px solid $color-default-white;
+        border-bottom: 1px solid $color-default-white;
+        transform: rotate(-45deg);
+
+        @include vp-1023 {
+          left: 18px;
+        }
+
+        @include vp-767 {
+          top: 12px;
+          left: 8px;
+        }
+      }
+    }
+
+    textarea {
+      background-color: $color-black-pearl-15;
+      border: 0;
+      border-radius: 3px;
+      padding: 25px 15px;
+      resize: none;
+      min-height: 155px;
+      flex-basis: 100%;
+      margin-bottom: 35px;
+
+      &::placeholder {
+        color: $color-default-white;
+        line-height: 22px;
+      }
+
+      @include vp-1023 {
+        padding: 32px 15px;
+      }
+
+      @include vp-767 {
+        min-height: 180px;
+        margin-bottom: 31px;
+        padding: 25px 15px;
+      }
+    }
+  }
+}

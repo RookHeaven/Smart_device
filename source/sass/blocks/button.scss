@@ -10,6 +10,22 @@
   cursor: pointer;
   transition: opacity $trans-default;
 
+  &--form {
+    font-family: $roboto-condensed-bold;
+    font-size: 16px;
+    line-height: 19px;
+    background-color: $color-black-pearl;
+    border: 1px solid transparent;
+    height: 45px;
+    min-width: 265px;
+    align-self: flex-start;
+    justify-content: center;
+
+    @include vp-767 {
+      flex-basis: 100%;
+    }
+  }
+
   &--promo {
     font-family: $roboto-condensed-bold;
     font-size: 18px;

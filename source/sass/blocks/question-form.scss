@@ -1,0 +1,58 @@
+.question-form {
+  background: $black-to-bottom-sky-blue-background;
+  padding: 166px 0 250px;
+
+  @include vp-1023 {
+    background: $color-deep-sky-blue;
+    padding: 45px 0 125px;
+  }
+
+  @include vp-767 {
+    background: $color-deep-sky-blue;
+    padding: 48px 0 90px;
+  }
+
+  &__container {
+    position: relative;
+    padding: 0 12px;
+
+    @include vp-1023 {
+      padding: 0 50px;
+    }
+
+    @include vp-767 {
+      padding: 0 25px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 510px;
+      height: 285px;
+      left: 18px;
+      top: 79px;
+      background: url("../img/paper_airplane.png") center center no-repeat;
+      background-size: contain;
+
+      @include vp-1023 {
+        display: none;
+      }
+
+      @include retina {
+        background-image: url("../img/paper_airplane@2x.png");
+      }
+    }
+  }
+
+  &__form {
+    width: 48%;
+    min-width: 585px;
+    margin-left: auto;
+
+    @include vp-1023 {
+      min-width: unset;
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
