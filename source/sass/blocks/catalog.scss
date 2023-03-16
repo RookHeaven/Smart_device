@@ -1,0 +1,177 @@
+.catalog {
+  background-color: $color-black-pearl;
+
+  h2 {
+    font-family: $roboto-condensed-regular;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    color: $color-default-white;
+    margin-top: 0;
+    margin-bottom: 54px;
+
+    @include vp-1023 {
+      margin-bottom: 37px;
+    }
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 39px;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 85px;
+    grid-row-gap: 30px;
+    margin: 0;
+    padding: 0;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__wrapper {
+    max-width: 1220px;
+    padding: 65px 0 140px;
+
+    @include vp-1023 {
+      padding: 57px 50px 75px;
+    }
+
+    @include vp-767 {
+      padding: 50px 25px 86px;
+    }
+  }
+
+  &__card {
+    max-width: 350px;
+    list-style: none;
+
+    @include vp-1023 {
+      max-width: 670px;
+    }
+
+    @include vp-767 {
+      max-width: 270px;
+    }
+
+    a {
+      position: relative;
+      display: block;
+      min-height: 650px;
+      padding-top: 45px;
+      padding-left: 43px;
+      width: 100%;
+
+      @include vp-1023 {
+        min-height: 250px;
+        padding-top: 36px;
+        padding-left: 45px;
+      }
+
+      @include vp-767 {
+        padding-top: 27px;
+        padding-left: 30px;
+      }
+
+      @include hover-focus {
+        opacity: 0.5;
+      }
+
+      @include active {
+        opacity: 0.7;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        right: 0;
+        bottom: 0;
+        background-color: $color-deep-sky-blue;
+        z-index: 1;
+        border-radius: 3px 0 0 0;
+
+        @include vp-767 {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        bottom: 29px;
+        right: 27px;
+        border-right: 1px solid $color-default-white;
+        border-bottom: 1px solid $color-default-white;
+        transform: rotate(-45deg);
+        z-index: 1;
+
+        @include vp-767 {
+          width: 40px;
+          height: 40px;
+          width: 3px;
+          height: 3px;
+          bottom: 18px;
+          right: 18px;
+        }
+      }
+
+      @include hover-focus {
+        &::before,
+        &::after {
+          opacity: 0.5;
+        }
+      }
+
+      @include active {
+        &::before,
+        &::after {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    h3 {
+      display: block;
+      position: relative;
+      font-family: $roboto-condensed-regular;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: $color-default-white;
+      width: 170px;
+      margin: 0;
+      z-index: 1;
+
+      @include vp-1023 {
+        width: 150px;
+      }
+
+      @include vp-767 {
+        font-size: 18px;
+        line-height: 30px;
+        width: 135px;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      @include vp-1023 {
+        width: 100%;
+      }
+    }
+  }
+}
