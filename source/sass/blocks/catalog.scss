@@ -70,11 +70,15 @@
       }
 
       @include hover-focus {
-        opacity: 0.5;
+        img {
+          opacity: 0.5;
+        }
       }
 
       @include active {
-        opacity: 0.7;
+        img {
+          opacity: 0.7;
+        }
       }
 
       &::before {
