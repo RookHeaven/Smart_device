@@ -59,10 +59,11 @@
   &__content {
     position: relative;
 
-    width: 600px;
+    width: 500px;
     padding: 40px;
 
-    background-color: $color-default-white;
+    background-color: $color-deep-sky-blue-background;
+    border-radius: 3px;
 
     @include vp-767 {
       width: 100%;
@@ -72,17 +73,55 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    display: block;
+    top: 17px;
+    right: 16px;
     z-index: 1;
-
     width: 40px;
     height: 40px;
     padding: 0;
-
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    &::before,
+    &::after {
+      width: 26px;
+      height: 1px;
+      content: "";
+      position: absolute;
+      background-color: $color-default-white;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    @include hover-focus {
+      background-color: $color-default-white;
+
+      &::before,
+      &::after {
+        background-color: $color-black-pearl;
+      }
+    }
+
+    @include active {
+      background-color: $color-default-white;
+
+      &::before,
+      &::after {
+        background-color: $color-black-pearl;
+        opacity: 0.7;
+      }
+    }
   }
 
   &--responsive {

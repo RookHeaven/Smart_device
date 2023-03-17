@@ -38,7 +38,7 @@
               <span>+7 (495) 000 52 52</span>
             </a>
           </div>
-          <button class="header__button button" type="button">Заказать звонок</button>
+          <button class="header__button button" type="button" data-open-modal="modal-1">Заказать звонок</button>
         </div>
       </header>
       <main>
@@ -157,11 +157,11 @@
               <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
               <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
               <div class="form__wrapper">
-                <div class="form__input custom-input custom-input--phone" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                <div class="form__input custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
                   <label class="visually-hidden" for="customer-name">Введите ваше имя</label>
                   <input type="text" name="name" id="customer-name" placeholder="Имя">
                 </div>
-                <div class="form__input custom-input custom-input--phone" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
+                <div class="form__input custom-input" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
                   <label class="visually-hidden" for="customer-phone">Укажите ваш телефон</label>
                   <input type="text" name="name" id="customer-phone" placeholder="Телефон">
                 </div>
@@ -263,6 +263,41 @@
           </div>
         </div>
       </footer>
+
+      <div class="modal" data-modal="modal-1">
+        <div class="modal__wrapper">
+          <div class="modal__overlay" data-close-modal></div>
+          <div class="modal__content" data-form-validate data-callback="base">
+            <form class="form form--popup" action="https://echo.htmlacademy.ru/" method="post">
+              <h2>Закажите звонок</h2>
+              <p>Оставьте контакты, мы&nbsp;проконсультируем<br>вас бесплатно в&nbsp;удобное время</p>
+              <div class="form__wrapper">
+                <div class="form__input custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                  <label class="visually-hidden" for="popup-customer-name">Введите ваше имя</label>
+                  <input type="text" name="name" id="popup-customer-name" placeholder="Имя">
+                </div>
+                <div class="form__input custom-input" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
+                  <label class="visually-hidden" for="popup-customer-phone">Укажите ваш телефон</label>
+                  <input type="text" name="name" id="popup-customer-phone" placeholder="Телефон">
+                </div>
+                <div class="form__textarea custom-input" data-validate-type="text">
+                  <label class="visually-hidden" for="popup-customer-question">Задайте ваш вопрос</label>
+                  <textarea type="text" name="question" id="popup-customer-question" placeholder="Ваш вопрос" rows="4" required></textarea>
+                </div>
+                <button class="form__button button" type="submit">Отправить</button>
+                <div class="form__toggle custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
+                  <input class="visually-hidden" type="checkbox" id="popup-data-agreement" name="data-agreement" checked>
+                  <label for="popup-data-agreement">Я&nbsp;согласен на&nbsp;обработку&ensp; персональных данных</label>
+                </div>
+              </div>
+            </form>
+            <button class="modal__close-btn button" data-close-modal data-focus type="button">
+              <span class="visually-hidden">Закрыть попап</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <script src="js/vendor.min.js"></script>
