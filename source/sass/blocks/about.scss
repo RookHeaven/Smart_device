@@ -4,10 +4,11 @@
   &__wrapper {
     display: grid;
     grid-template-areas:
-        "img text"
-        "img btn";
+      "img text"
+      "img btn";
     grid-column-gap: 100px;
-    padding: 0 0 100px 17px;
+    padding: 0 12px 100px 28px;
+    max-width: 1260px;
 
     @include vp-1023 {
       grid-column-gap: 29px;
@@ -95,7 +96,7 @@
     width: 180px;
     height: 45px;
     grid-area: btn;
-    padding: 14px 13px 8px 12px;
+    padding: 8px 13px 8px 12px;
     align-items: center;
     justify-content: center;
 
@@ -114,7 +115,7 @@
       width: 160px;
       height: 35px;
       margin-top: 15px;
-      padding: 8px 15px 12px;
+      padding: 8px 15px;
     }
   }
 }

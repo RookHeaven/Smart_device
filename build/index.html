@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Smart Device web site">
     <title>Smart Device</title>
+    <link rel="icon" href="img/favicons/favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
@@ -95,9 +99,9 @@
           <div class="about__wrapper container">
             <div class="about__picture">
               <picture>
-                <source type="image/webp" media="(min-width: 320px)" srcset="img/about.webp 1x,
-                img/about@2x.webp 2x">
-                <img src="img/about.png" srcset="img/about@2x.png 2x" alt="2022 год." width="150" height="320">
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/about/about.webp 1x,
+                img/about/about@2x.webp 2x">
+                <img src="img/about/about.png" srcset="img/about/about@2x.png 2x" alt="2022 год." width="150" height="320">
               </picture>
             </div>
             <div class="about__inner" data-read-more="content">
@@ -167,7 +171,7 @@
                 </div>
                 <div class="form__textarea custom-input" data-validate-type="text">
                   <label class="visually-hidden" for="customer-question">Задайте ваш вопрос</label>
-                  <textarea type="text" name="question" id="customer-question" placeholder="Ваш вопрос" rows="4" required></textarea>
+                  <textarea name="question" id="customer-question" placeholder="Ваш вопрос" rows="4" required></textarea>
                 </div>
                 <button class="form__button button" type="submit">Задать вопрос</button>
                 <div class="form__toggle custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
@@ -274,7 +278,7 @@
               <div class="form__wrapper">
                 <div class="form__input custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
                   <label class="visually-hidden" for="popup-customer-name">Введите ваше имя</label>
-                  <input type="text" name="name" id="popup-customer-name" placeholder="Имя">
+                  <input type="text" name="name" id="popup-customer-name" placeholder="Имя" data-focus>
                 </div>
                 <div class="form__input custom-input" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
                   <label class="visually-hidden" for="popup-customer-phone">Укажите ваш телефон</label>
@@ -282,7 +286,7 @@
                 </div>
                 <div class="form__textarea custom-input" data-validate-type="text">
                   <label class="visually-hidden" for="popup-customer-question">Задайте ваш вопрос</label>
-                  <textarea type="text" name="question" id="popup-customer-question" placeholder="Ваш вопрос" rows="4" required></textarea>
+                  <textarea name="question" id="popup-customer-question" placeholder="Ваш вопрос" rows="4" required></textarea>
                 </div>
                 <button class="form__button button" type="submit">Отправить</button>
                 <div class="form__toggle custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">

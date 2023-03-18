@@ -94,7 +94,7 @@
     opacity: 0.8;
     margin: 0;
 
-    input[type=checkbox] + label {
+    input[type="checkbox"] + label {
       position: relative;
       display: flex;
       margin-top: 15px;
@@ -126,7 +126,7 @@
       }
     }
 
-    input[type=checkbox]:focus + label {
+    input[type="checkbox"]:focus + label {
       &::before {
         background-color: $color-black-pearl;
       }
@@ -159,8 +159,8 @@
     justify-content: center;
 
     @include hover-focus {
-        background-color: $color-default-white;
-        color: $color-black-pearl;
+      background-color: $color-default-white;
+      color: $color-black-pearl;
     }
 
     @include active {

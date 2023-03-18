@@ -1,5 +1,7 @@
 .accordion {
-  margin: 0 auto 50px auto;
+  @include vp-1023 {
+    margin: 0 0 50px;
+  }
 
   & & {
     width: 90%;

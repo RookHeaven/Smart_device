@@ -31,7 +31,7 @@
       height: 285px;
       left: 18px;
       top: 79px;
-      background: url("../img/paper_airplane.png") center center no-repeat;
+      background: url("../img/airplane/paper_airplane.png") center center no-repeat;
       background-size: contain;
 
       @include vp-1023 {
@@ -39,7 +39,7 @@
       }
 
       @include retina {
-        background-image: url("../img/paper_airplane@2x.png");
+        background-image: url("../img/airplane/paper_airplane@2x.png");
       }
     }
   }

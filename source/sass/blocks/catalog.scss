@@ -111,8 +111,6 @@
         z-index: 1;
 
         @include vp-767 {
-          width: 40px;
-          height: 40px;
           width: 3px;
           height: 3px;
           bottom: 18px;
@@ -152,7 +150,6 @@
       bottom: 0;
       width: 100%;
       height: 100%;
-      width: 100%;
       object-fit: cover;
     }
   }

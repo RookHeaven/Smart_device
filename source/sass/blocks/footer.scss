@@ -5,7 +5,7 @@
     display: flex;
     justify-content: flex-start;
     color: $color-default-white;
-    padding: 50px 10px 30px;
+    padding: 50px 17px 46px;
 
     @include vp-1023 {
       display: flex;
@@ -19,7 +19,6 @@
   }
 
   &__social {
-
     @include vp-1023 {
       display: flex;
       justify-content: space-between;
@@ -80,6 +79,7 @@
   }
 
   &__logo {
+    width: 215px;
     margin-bottom: 30px;
 
     @include vp-767 {

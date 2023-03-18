@@ -1221,7 +1221,7 @@ button,
 }
 @media (max-width: 1023px) {
   .header {
-    display: block;
+    position: static;
   }
 }
 .header__wrapper {
@@ -1268,16 +1268,19 @@ button,
       flex-wrap: wrap;
   gap: 36px;
   margin-bottom: 5px;
+  max-width: 480px;
 }
 @media (max-width: 1023px) {
   .header__contacts {
     gap: 19px;
     margin-bottom: 15px;
+    max-width: 300px;
   }
 }
 @media (max-width: 767px) {
   .header__contacts {
     margin: 0;
+    max-width: 170px;
   }
 }
 .header__contacts a {
@@ -1343,16 +1346,16 @@ button,
 }
 @media (hover: hover) {
   .header__button:hover:not(.focus-visible) {
-    border: transparent;
+    border: 1px solid transparent;
     background-color: #00b2ff;
   }
 }
 .header__button.focus-visible:focus {
-  border: transparent;
+  border: 1px solid transparent;
   background-color: #00b2ff;
 }
 .header__button:active:not(.focus-visible) {
-  border: transparent;
+  border: 1px solid transparent;
   background-color: #00b2ff;
   opacity: 0.8;
 }
@@ -1551,7 +1554,7 @@ button,
       -ms-flex-pack: start;
           justify-content: flex-start;
   color: #ffffff;
-  padding: 50px 10px 30px;
+  padding: 50px 17px 46px;
 }
 @media (max-width: 1023px) {
   .footer__wrapper {
@@ -1654,6 +1657,7 @@ button,
   opacity: 0.8;
 }
 .footer__logo {
+  width: 215px;
   margin-bottom: 30px;
 }
 @media (max-width: 767px) {
@@ -1827,8 +1831,10 @@ button,
   opacity: 0.8;
 }
 
-.accordion {
-  margin: 0 auto 50px auto;
+@media (max-width: 1023px) {
+  .accordion {
+    margin: 0 0 50px;
+  }
 }
 .accordion .accordion {
   width: 90%;
@@ -1921,19 +1927,17 @@ button,
   background-color: #f8fdff;
 }
 .advantages__wrapper {
-  padding: 120px 0;
-  max-width: 1202px;
+  padding: 120px 10px 120px 31px;
+  max-width: 1262px;
 }
 @media (max-width: 1023px) {
   .advantages__wrapper {
-    padding: 78px 0;
-    max-width: 670px;
+    padding: 78px 50px;
   }
 }
 @media (max-width: 767px) {
   .advantages__wrapper {
-    padding: 50px 0;
-    max-width: 270px;
+    padding: 50px 25px;
   }
 }
 .advantages ul {
@@ -1954,7 +1958,6 @@ button,
 }
 .advantages__card {
   min-height: 300px;
-  min-width: 595px;
   padding: 40px 40px 35px;
   list-style: none;
   border: 1px solid #ebebeb;
@@ -1998,14 +2001,12 @@ button,
 @media (max-width: 1023px) {
   .advantages__card {
     min-height: 360px;
-    min-width: 320px;
     padding: 40px 30px 29px 40px;
   }
 }
 @media (max-width: 767px) {
   .advantages__card {
     min-height: 325px;
-    min-width: 270px;
     padding: 30px 30px 35px 25px;
   }
 }
@@ -2070,7 +2071,8 @@ button,
   display: grid;
       grid-template-areas: "img text" "img btn";
   grid-column-gap: 100px;
-  padding: 0 0 100px 17px;
+  padding: 0 12px 100px 28px;
+  max-width: 1260px;
 }
 @media (max-width: 1023px) {
   .about__wrapper {
@@ -2168,7 +2170,7 @@ button,
   width: 180px;
   height: 45px;
   grid-area: btn;
-  padding: 14px 13px 8px 12px;
+  padding: 8px 13px 8px 12px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2196,7 +2198,7 @@ button,
     width: 160px;
     height: 35px;
     margin-top: 15px;
-    padding: 8px 15px 12px;
+    padding: 8px 15px;
   }
 }
 
@@ -2322,8 +2324,6 @@ button,
 }
 @media (max-width: 767px) {
   .catalog__card a::after {
-    width: 40px;
-    height: 40px;
     width: 3px;
     height: 3px;
     bottom: 18px;
@@ -2362,7 +2362,6 @@ button,
   bottom: 0;
   width: 100%;
   height: 100%;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2405,7 +2404,7 @@ button,
   height: 285px;
   left: 18px;
   top: 79px;
-  background: url("../img/paper_airplane.png") center center no-repeat;
+  background: url("../img/airplane/paper_airplane.png") center center no-repeat;
   background-size: contain;
 }
 @media (max-width: 1023px) {
@@ -2415,7 +2414,7 @@ button,
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .question-form__container::before {
-    background-image: url("../img/paper_airplane@2x.png");
+    background-image: url("../img/airplane/paper_airplane@2x.png");
   }
 }
 .question-form__form {

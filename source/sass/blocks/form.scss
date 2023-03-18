@@ -135,7 +135,7 @@
       width: 100%;
     }
 
-    input[type=checkbox] + label {
+    input[type="checkbox"] + label {
       position: relative;
       display: flex;
       margin-top: 15px;
@@ -186,7 +186,7 @@
       }
     }
 
-    input[type=checkbox]:focus + label {
+    input[type="checkbox"]:focus + label {
       &::before {
         background-color: $color-black-pearl;
       }
@@ -232,8 +232,8 @@
     }
 
     @include hover-focus {
-        background-color: $color-default-white;
-        color: $color-black-pearl;
+      background-color: $color-default-white;
+      color: $color-black-pearl;
     }
 
     @include active {
@@ -245,9 +245,9 @@
 
   &--popup {
     h2 {
-    font-size: 30px;
-    line-height: 42px;
-    margin-bottom: 0;
+      font-size: 30px;
+      line-height: 42px;
+      margin-bottom: 0;
     }
 
     p {
@@ -270,7 +270,7 @@
       width: 100%;
     }
 
-    input[type=checkbox] + label {
+    input[type="checkbox"] + label {
       margin-top: 20px;
       padding-left: 34px;
 

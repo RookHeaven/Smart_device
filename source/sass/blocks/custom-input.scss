@@ -19,7 +19,7 @@
       min-height: 48px;
       margin-left: auto;
       padding: 10px;
-      border: 2px solid rgba(#000000, 0.2);
+      border: 2px solid rgba($color-default-black, 0.2);
       border-radius: 5px;
       outline: none;
 
@@ -31,11 +31,11 @@
       }
 
       &:hover {
-        border: 2px solid rgba(#000000, 0.5);
+        border: 2px solid rgba($color-default-black, 0.5);
       }
 
       &:focus {
-        border: 2px solid rgba(#000000, 0.8);
+        border: 2px solid rgba($color-default-black, 0.8);
       }
     }
   }
@@ -51,7 +51,7 @@
     right: 0;
     bottom: 35px;
 
-    color: #ff1553;
+    color: $color-torch-red;
 
     opacity: 0;
 
@@ -65,11 +65,11 @@
   &.is-invalid {
     input,
     textarea {
-      border: 2px solid #ff1553;
+      border: 2px solid $color-torch-red;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        border: 2px solid rgba($color-torch-red, 0.5);
       }
     }
   }

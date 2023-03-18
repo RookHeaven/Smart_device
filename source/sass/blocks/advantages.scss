@@ -2,17 +2,15 @@
   background-color: $color-alice-blue-100;
 
   &__wrapper {
-    padding: 120px 0;
-    max-width: 1202px;
+    padding: 120px 10px 120px 31px;
+    max-width: 1262px;
 
     @include vp-1023 {
-      padding: 78px 0;
-      max-width: 670px;
+      padding: 78px 50px;
     }
 
     @include vp-767 {
-      padding: 50px 0;
-      max-width: 270px;
+      padding: 50px 25px;
     }
   }
 
@@ -31,7 +29,6 @@
 
   &__card {
     min-height: 300px;
-    min-width: 595px;
     padding: 40px 40px 35px;
     list-style: none;
     border: 1px solid $color-whisper;
@@ -68,13 +65,11 @@
 
     @include vp-1023 {
       min-height: 360px;
-      min-width: 320px;
       padding: 40px 30px 29px 40px;
     }
 
     @include vp-767 {
       min-height: 325px;
-      min-width: 270px;
       padding: 30px 30px 35px 25px;
     }
 

@@ -33,7 +33,7 @@
       width: 28px;
       height: 28px;
 
-      border: 1px solid #2c39f2;
+      border: 1px solid $color-neon-blue;
       border-radius: 50%;
 
       transition: border 0.3s ease;
@@ -47,7 +47,7 @@
         width: 20px;
         height: 20px;
 
-        color: rgba(255, 255, 255, 0);
+        color: $color-transparent;
 
         border-radius: 50%;
         transform: translate(-50%, -50%);
@@ -58,10 +58,10 @@
   }
 
   input:checked + .custom-toggle__icon {
-    border: 1.5px solid #2c39f2;
+    border: 1.5px solid $color-neon-blue;
 
     &::before {
-      background-color: #2c39f2;
+      background-color: $color-neon-blue;
     }
   }
 
