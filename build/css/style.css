@@ -317,21 +317,21 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "RobotoCondensed-Regular";
+  font-family: "RobotoCondensed";
   font-display: swap;
   src: url("/fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("/fonts/RobotoCondensed-Regular.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "RobotoCondensed-Bold";
+  font-family: "RobotoCondensed";
   font-display: swap;
   src: url("/fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("/fonts/RobotoCondensed-Bold.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "PTMono-Regular";
+  font-family: "PTMono";
   font-display: swap;
   src: url("/fonts/PTMono-Regular.woff2") format("woff2"), url("/fonts/PTMono-Regular.woff") format("woff");
 }
@@ -354,7 +354,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
-  font-family: "PTMono-Regular", "Arial", sans-serif;
+  font-family: "PTMono", "Arial", sans-serif;
   color: #041827;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -762,51 +762,6 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-}
-.custom-input label input,
-.custom-input label textarea,
-.custom-textarea label input,
-.custom-textarea label textarea {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  max-width: 300px;
-  min-height: 48px;
-  margin-left: auto;
-  padding: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  outline: none;
-  -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
-  transition: border 0.3s ease;
-}
-@media screen and (max-width: 767px) {
-  .custom-input label input,
-.custom-input label textarea,
-.custom-textarea label input,
-.custom-textarea label textarea {
-    max-width: unset;
-    width: 100%;
-  }
-}
-.custom-input label input:hover,
-.custom-input label textarea:hover,
-.custom-textarea label input:hover,
-.custom-textarea label textarea:hover {
-  border: 2px solid rgba(0, 0, 0, 0.5);
-}
-.custom-input label input:focus,
-.custom-input label textarea:focus,
-.custom-textarea label input:focus,
-.custom-textarea label textarea:focus {
-  border: 2px solid rgba(0, 0, 0, 0.8);
-}
-@media screen and (max-width: 767px) {
-  .custom-input__label,
-.custom-textarea__label {
-    margin: 0 0 18px 0;
   }
 }
 .custom-input__error,
@@ -1337,7 +1292,7 @@ button,
   min-width: 160px;
   height: 40px;
   border: 1px solid #f2f5f6;
-  font-family: "RobotoCondensed-Bold", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-size: 14px;
   line-height: 16px;
   padding: 10px 15px;
@@ -1440,7 +1395,7 @@ button,
           flex-direction: column;
 }
 .promo__info h1 {
-  font-family: "RobotoCondensed-Bold", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-size: 80px;
   line-height: 94px;
   letter-spacing: 0.07em;
@@ -1463,7 +1418,7 @@ button,
   }
 }
 .promo__info p {
-  font-family: "PTMono-Regular", "Arial", sans-serif;
+  font-family: "PTMono", "Arial", sans-serif;
   font-size: 22px;
   line-height: 34px;
   color: #f2f5f6;
@@ -1483,7 +1438,7 @@ button,
   }
 }
 .promo__button {
-  font-family: "RobotoCondensed-Bold", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-size: 18px;
   line-height: 21px;
   border: 1px solid transparent;
@@ -1706,7 +1661,7 @@ button,
   }
 }
 .footer__navigation h3 {
-  font-family: "RobotoCondensed-Regular", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 16px;
@@ -1746,7 +1701,7 @@ button,
   }
 }
 .footer__navigation a {
-  font-family: "PTMono-Regular", "Arial", sans-serif;
+  font-family: "PTMono", "Arial", sans-serif;
   color: #ffffff;
   opacity: 0.7;
 }
@@ -1770,7 +1725,7 @@ button,
   }
 }
 .footer__contacts h3 {
-  font-family: "RobotoCondensed-Regular", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 16px;
@@ -1791,7 +1746,7 @@ button,
 }
 .footer__contacts p,
 .footer__contacts a {
-  font-family: "PTMono-Regular", "Arial", sans-serif;
+  font-family: "PTMono", "Arial", sans-serif;
   color: #ffffff;
   opacity: 0.7;
   margin-bottom: 6px;
@@ -1853,6 +1808,16 @@ button,
 .accordion__element.is-active .accordion__button::after {
   content: none;
 }
+.accordion__element.is-active .accordion__content {
+  max-height: 100%;
+}
+.accordion__content {
+  max-height: 0;
+  -webkit-transition: max-height 0.3s;
+  -o-transition: max-height 0.3s;
+  transition: max-height 0.3s;
+  overflow: hidden;
+}
 .accordion__button {
   display: none;
   padding: 0;
@@ -1903,24 +1868,6 @@ button,
   .accordion__header h3 {
     margin: 0;
   }
-}
-
-[data-accordion=element].is-active > [data-accordion=content] {
-  max-height: 100%;
-}
-
-[data-accordion=parent].no-transition [data-accordion=content] {
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-
-[data-accordion=content] {
-  max-height: 0;
-  -webkit-transition: max-height 0.3s;
-  -o-transition: max-height 0.3s;
-  transition: max-height 0.3s;
-  overflow: hidden;
 }
 
 .advantages {
@@ -2038,7 +1985,7 @@ button,
   }
 }
 .advantages__card h3 {
-  font-family: "RobotoCondensed-Regular", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 33px;
@@ -2121,7 +2068,7 @@ button,
   }
 }
 .about__inner h2 {
-  font-family: "RobotoCondensed-Regular", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;
@@ -2161,7 +2108,7 @@ button,
 .about__button {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
-  font-family: "RobotoCondensed-Bold", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-size: 14px;
   line-height: 16px;
   border: 1px solid #00b2ff;
@@ -2206,7 +2153,7 @@ button,
   background-color: #041827;
 }
 .catalog h2 {
-  font-family: "RobotoCondensed-Regular", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
@@ -2333,7 +2280,7 @@ button,
 .catalog__card h3 {
   display: block;
   position: relative;
-  font-family: "RobotoCondensed-Regular", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
@@ -2434,7 +2381,7 @@ button,
   color: #ffffff;
 }
 .form h2 {
-  font-family: "RobotoCondensed-Regular", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
@@ -2676,7 +2623,7 @@ button,
   }
 }
 .form__button {
-  font-family: "RobotoCondensed-Bold", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-size: 16px;
   line-height: 19px;
   background-color: #041827;
@@ -2746,7 +2693,7 @@ button,
   color: #ffffff;
 }
 .popup h2 {
-  font-family: "RobotoCondensed-Regular", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 42px;
@@ -2903,7 +2850,7 @@ button,
           transform: rotate(-45deg);
 }
 .popup__button {
-  font-family: "RobotoCondensed-Bold", "Arial Black", sans-serif;
+  font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-size: 16px;
   line-height: 19px;
   background-color: #041827;

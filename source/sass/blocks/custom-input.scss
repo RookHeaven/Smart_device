@@ -11,39 +11,6 @@
       align-items: flex-start;
       flex-direction: column;
     }
-
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
-      border: 2px solid rgba($color-default-black, 0.2);
-      border-radius: 5px;
-      outline: none;
-
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba($color-default-black, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba($color-default-black, 0.8);
-      }
-    }
-  }
-
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
-    }
   }
 
   &__error {
