@@ -561,6 +561,7 @@ button,
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 15px 25px;
+  font-weight: 700;
   color: #f2f5f6;
   text-transform: uppercase;
   letter-spacing: 0.05em;
