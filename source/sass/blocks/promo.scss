@@ -98,7 +98,8 @@
     border: 1px solid transparent;
     background-color: $color-deep-sky-blue;
     min-width: 410px;
-    height: 55px;
+    min-height: 55px;
+    max-width: 500px;
     align-self: flex-start;
 
     @include hover-focus {
@@ -120,7 +121,7 @@
       font-size: 14px;
       line-height: 16px;
       margin: 0 0 2px 0;
-      height: 40px;
+      min-height: 40px;
       min-width: 270px;
       padding: 10px 30px;
       justify-content: center;

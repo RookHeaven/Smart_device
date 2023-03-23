@@ -39,9 +39,9 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 36px;
+    gap: 8px 121px;
     margin-bottom: 5px;
-    max-width: 480px;
+    max-width: 540px;
 
     @include vp-1023 {
       gap: 19px;
@@ -51,14 +51,12 @@
 
     @include vp-767 {
       margin: 0;
-      max-width: 170px;
     }
 
 
     a {
       display: flex;
       align-items: center;
-      min-width: 215px;
       color: $color-alice-blue;
       line-height: 18px;
 
@@ -97,8 +95,9 @@
   }
 
   &__button {
-    min-width: 160px;
-    height: 40px;
+    width: 160px;
+    max-width: 200px;
+    min-height: 40px;
     border: 1px solid $color-alice-blue;
     font-family: $roboto-condensed-bold;
     font-size: 14px;

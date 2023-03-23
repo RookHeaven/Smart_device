@@ -1,6 +1,4 @@
 .about {
-  background-color: $color-alice-blue-100;
-
   &__wrapper {
     display: grid;
     grid-template-areas:
@@ -94,11 +92,13 @@
     background-color: transparent;
     color: $color-deep-sky-blue;
     width: 180px;
-    height: 45px;
+    min-height: 45px;
+    max-width: 500px;
     grid-area: btn;
     padding: 8px 13px 8px 12px;
     align-items: center;
     justify-content: center;
+    align-self: start;
 
     @include hover-focus {
       background-color: $color-deep-sky-blue;

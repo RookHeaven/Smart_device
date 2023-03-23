@@ -13,6 +13,8 @@
   }
 
   &__container {
+    display: flex;
+    align-items: center;
     position: relative;
     padding: 0 12px;
 
@@ -25,9 +27,11 @@
     }
 
     &::before {
+      display: flex;
+      margin-top: 11px;
+      margin-right: 20px;
       content: "";
-      position: absolute;
-      width: 510px;
+      width: 44%;
       height: 285px;
       left: 18px;
       top: 79px;
