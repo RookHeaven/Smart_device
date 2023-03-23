@@ -19,6 +19,7 @@ html {
   font-family: $ptmono-regular;
   color: $color-black-pearl;
   scroll-behavior: smooth;
+  min-width: $vp-320;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

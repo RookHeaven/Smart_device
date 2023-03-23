@@ -319,21 +319,21 @@ template {
   font-weight: 400;
   font-family: "RobotoCondensed";
   font-display: swap;
-  src: url("/fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("/fonts/RobotoCondensed-Regular.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 700;
   font-family: "RobotoCondensed";
   font-display: swap;
-  src: url("/fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("/fonts/RobotoCondensed-Bold.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
 }
 @font-face {
   font-style: normal;
   font-weight: 400;
   font-family: "PTMono";
   font-display: swap;
-  src: url("/fonts/PTMono-Regular.woff2") format("woff2"), url("/fonts/PTMono-Regular.woff") format("woff");
+  src: url("../fonts/PTMono-Regular.woff2") format("woff2"), url("../fonts/PTMono-Regular.woff") format("woff");
 }
 *,
 *::before,
@@ -357,6 +357,7 @@ html {
   font-family: "PTMono", "Arial", sans-serif;
   color: #041827;
   scroll-behavior: smooth;
+  min-width: 320px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
