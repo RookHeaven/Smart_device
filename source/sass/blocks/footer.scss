@@ -187,6 +187,10 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       margin: 0 0 20px 0;
+
+      @include vp-1023 {
+        margin: 0 0 23px 0;
+      }
     }
 
     div {

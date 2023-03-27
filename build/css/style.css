@@ -1739,6 +1739,11 @@ button,
   text-transform: uppercase;
   margin: 0 0 20px 0;
 }
+@media (max-width: 1023px) {
+  .footer__contacts h3 {
+    margin: 0 0 23px 0;
+  }
+}
 .footer__contacts div {
   gap: 6px;
 }
@@ -2149,7 +2154,7 @@ button,
 @media (max-width: 767px) {
   .about__button {
     width: 160px;
-    height: 35px;
+    min-height: 35px;
     margin-top: 15px;
     padding: 8px 15px;
   }
@@ -2158,7 +2163,7 @@ button,
 .catalog {
   background-color: #041827;
 }
-.catalog h2 {
+.catalog__title {
   font-family: "RobotoCondensed", "Arial Black", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -2168,14 +2173,29 @@ button,
   margin-bottom: 54px;
 }
 @media (max-width: 1023px) {
-  .catalog h2 {
+  .catalog__title {
     margin-bottom: 37px;
   }
 }
 @media (max-width: 767px) {
-  .catalog h2 {
+  .catalog__title {
     font-size: 28px;
     line-height: 39px;
+    margin-bottom: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .catalog__title span:first-of-type {
+    display: none;
+  }
+}
+.catalog__title span:last-of-type {
+  display: none;
+}
+@media (max-width: 767px) {
+  .catalog__title span:last-of-type {
+    display: block;
+    padding: 0 35px 0 0;
   }
 }
 .catalog ul {

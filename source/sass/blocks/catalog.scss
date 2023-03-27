@@ -1,7 +1,7 @@
 .catalog {
   background-color: $color-black-pearl;
 
-  h2 {
+  &__title {
     font-family: $roboto-condensed-regular;
     font-weight: 400;
     font-size: 36px;
@@ -17,6 +17,22 @@
     @include vp-767 {
       font-size: 28px;
       line-height: 39px;
+      margin-bottom: 26px;
+    }
+
+    span:first-of-type {
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    span:last-of-type {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+        padding: 0 35px 0 0;
+      }
     }
   }
 

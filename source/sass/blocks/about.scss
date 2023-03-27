@@ -113,7 +113,7 @@
 
     @include vp-767 {
       width: 160px;
-      height: 35px;
+      min-height: 35px;
       margin-top: 15px;
       padding: 8px 15px;
     }
