@@ -114,7 +114,10 @@
 
         <section class="catalog">
           <div class="catalog__wrapper container">
-            <h2>Smart Device предлагает следующие товары и&nbsp;услуги</h2>
+            <h2 class="catalog__title">
+              <span>Smart Device предлагает следующие товары и&nbsp;услуги</span>
+              <span>Товары и&nbsp;услуги Smart Device</span>
+            </h2>
             <ul>
               <li class="catalog__card">
                 <a href="#">
@@ -171,11 +174,11 @@
                   <label class="visually-hidden" for="customer-question">Задайте ваш вопрос</label>
                   <textarea name="question" id="customer-question" placeholder="Ваш вопрос" rows="4" required></textarea>
                 </div>
-                <button class="form__button button" type="submit">Задать вопрос</button>
                 <div class="form__toggle custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
                   <input class="visually-hidden" type="checkbox" id="data-agreement" name="data-agreement" checked>
                   <label for="data-agreement">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
                 </div>
+                <button class="form__button button" type="submit">Задать вопрос</button>
               </div>
             </form>
           </div>
@@ -256,11 +259,21 @@
                 </button>
               </div>
               <div class="accordion__content" data-accordion="content">
-                  <p>г. Мытищи, Олимпийский проспект, д.10</p>
+                <ul>
+                  <li>
+                    <p>г. Мытищи, Олимпийский проспект, д.10</p>
+                  </li>
+                  <li>
                   <a href="tel:84955894050">+7 (495) 589-40-50</a>
+                  </li>
+                  <li>
                   <a href="tel:89253895829">+7 (925) 389-58-29</a>
+                  </li>
+                  <li>
                   <a href="tel:89253647813">+7 (925) 364-78-13</a>
-                </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -286,11 +299,11 @@
                   <label class="visually-hidden" for="popup-customer-question">Задайте ваш вопрос</label>
                   <textarea name="question" id="popup-customer-question" placeholder="Ваш вопрос" rows="4" required></textarea>
                 </div>
-                <button class="form__button button" type="submit">Отправить</button>
                 <div class="form__toggle custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
                   <input class="visually-hidden" type="checkbox" id="popup-data-agreement" name="data-agreement" checked>
                   <label for="popup-data-agreement">Я&nbsp;согласен на&nbsp;обработку&ensp; персональных данных</label>
                 </div>
+                <button class="form__button button" type="submit">Отправить</button>
               </div>
             </form>
             <button class="modal__close-btn button" data-close-modal data-focus type="button">
